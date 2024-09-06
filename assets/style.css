@@ -22,6 +22,13 @@
     background-image: url('./123.avif');
     background-color: #000;
     padding: 20px 0;
+    border-image: auto;
+    background-size: cover;
+    background-position: center;
+    zoom: 1.5;
+    object-fit: fill;
+    justify-content: center;
+    display: flex;
   }
   
   header .logo h1 {
@@ -34,17 +41,6 @@
     border-radius: 5px;
     background-color: black;
     justify-content: right;
-  }
-  
-  /* Image Section */
-  .header-image img {
-    background-image: url(./123.avif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    justify-content: center;
-  /* width: 100%;
-  height: auto; */
-    
   }
   
   /* Navbar */
