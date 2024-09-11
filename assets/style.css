@@ -67,14 +67,20 @@
     display: inline-block;
     margin: 0 20px;
   }
-
+.box-shadow:hover {
+    background-color: #e77f08;
+    /* color: #000; */
+  }
   nav ul li a {
+    font-weight: bold;
     text-decoration: none;
-    color: #099cf1;
+    color: #09e9f1;
     font-size: 1rem;
-    border: 2px solid #e92c06;
+    border: 2px solid #e6b208;
     padding: 5px 10px;
-    background-color: #000;
+    background-color: #9ee9e5;
+    box-shadow: inset 0 0 10px #000;
+    text-shadow: #3e3c3c 1px 1px;
   }
   
   footer a { font-size: 22px;
@@ -116,7 +122,7 @@
   }
   
   .hero-content h2 {
-    color: #06d4fd;
+    color: #09b8e9;
     text-shadow: rgb(121, 117, 117) 2px 2px;
     font-size: 3rem;
     font-weight: bold;
@@ -124,17 +130,19 @@
   }
   
   .cta-btn {
+    font-weight: bolder;
     background-color: #ffb100;
     padding: 15px 30px;
-    color: #111;
+    color: #01c5f7;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     font-size: 1.1rem;
+    box-shadow: inset 10px 10px 50px #b1884b;
   }
   
   .cta-btn:hover {
-    background-color: #fff;
+    background-color: #e40c0c;
   }
   
   /* Modal */
