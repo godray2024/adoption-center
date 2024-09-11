@@ -19,7 +19,7 @@
   
   /* Header Section */
   header {
-    background-image: url(../CSS/123.avif);
+    background-image: url(./123.avif);
     border-image: auto;
     background-size: cover;
     background-position: center;
@@ -32,7 +32,7 @@
     border-image: auto;
     background-size: cover;
     background-position: center;
-    zoom: 1.5;
+    zoom: 3;
     object-fit: fill;
     justify-content: center;
     display: flex;
