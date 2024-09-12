@@ -1,40 +1,33 @@
-// Get modal element
-const loginModal = document.getElementById('loginModal');
-// Get login button
-const loginBtn = document.getElementById('loginBtn');
-// Get close button
-const closeBtn = document.querySelector('.close');
-// Get form and input
-const loginForm = document.getElementById('loginForm');
-const usernameInput = document.getElementById('username');
-const errorElement = document.getElementById('error');
+// Ensure the DOM is fully loaded before running the script
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the modal element
+  var contactModal = document.getElementById('contactModal');
 
-// Show modal when login button is clicked
-loginBtn.addEventListener('click', function () {
-  loginModal.style.display = 'block';
-});
+  // Get the button that opens the modal
+  var btn = document.getElementById('contactBtn'); // Assuming you have a button with this ID to open the modal
 
-// Close modal when close button is clicked
-closeBtn.addEventListener('click', function () {
-  loginModal.style.display = 'none';
-});
+  // When the user clicks the button, open the modal
+  btn.onclick = function () {
+      $(contactModal).modal('show');
+  };
 
-// Close modal if clicked outside of the modal content
-window.addEventListener('click', function (e) {
-  if (e.target === loginModal) {
-    loginModal.style.display = 'none';
-  }
-});
+  // Handle the "Send Message" button click
+  var sendMessageBtn = contactModal.querySelector('.btn-primary');
+  sendMessageBtn.onclick = function () {
+      // You can add your form submission logic here
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
 
-// Handle login form submission
-loginForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-  const username = usernameInput.value.trim();
-  if (username === '') {
-    errorElement.textContent = 'Please enter a username.';
-  } else {
-    errorElement.textContent = '';
-    alert('Welcome, ' + username + '!');
-    loginModal.style.display = 'none';
-  }
+      // Log the values to the console
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Message:', message);
+
+      // Clear the form fields after submission
+      document.querySelector('form').reset();
+
+      // Close the modal
+      $(contactModal).modal('hide');
+  };
 });
