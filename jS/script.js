@@ -1,3 +1,5 @@
+// Login Modal
+
 // Ensure the DOM is fully loaded before running the script
 document.addEventListener('DOMContentLoaded', function () {
   // Get the modal element
@@ -33,3 +35,4 @@ document.addEventListener('DOMContentLoaded', function () {
     $(loginModal).modal('hide');
   };
 });
+
