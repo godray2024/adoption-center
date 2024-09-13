@@ -122,12 +122,27 @@
   }
   
   .hero-content h2 {
-    color: #09b8e9;
+    color: #0df4f4;
     text-shadow: rgb(121, 117, 117) 2px 2px;
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
+    animation: ChangeColor 5s infinite;
   }
+
+  @keyframes ChangeColor {
+    110% {
+      color: #0df4f4;
+    }
+    50% {
+      color: #f40d0d;
+    }
+    100% {
+      color: #0df40d;
+    }
+  
+  }
+
   
   .cta-btn {
     font-weight: bolder;
@@ -139,6 +154,21 @@
     font-weight: bold;
     font-size: 1.1rem;
     box-shadow: inset 10px 10px 50px #b1884b;
+    animation: changeColor 5s infinite;
+  }
+
+  @keyframes changeColor {
+    0% {
+      background-color: #ffb100;
+    }
+    50% {
+      background-color: #e40c0c;
+    }
+    100% {
+      background-color: #0400ff;
+    }
+
+    
   }
   
   .cta-btn:hover {

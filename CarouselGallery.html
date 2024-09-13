@@ -1,109 +1,260 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Image Carousel</title>
-  <style>
-    .carousel-container {
-      position: relative;
-      width: 500px;
-      height: 300px;
-      margin: 0 auto;
-      overflow: hidden;
-    }
+  <head>
+    <title>Image Carousel</title>
+    <style>
+      body {
+        background-image: url("./assets/41-dfb8982077cfc034196d588670c31041898e44bc7fd309b575b5eae321229f29.jpg"); /* Full background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+      }
+      .back-button {
+        display: block;
+        margin: 20px auto; /* Center horizontally */
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #e49d04;
+        color: rgb(245, 11, 11);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+      }
+      .back-button:hover {
+        background-color: #0056b3;
+      }
+      .carousel-container {
+        position: relative;
+        width: 700px; /* Carousel size */
+        height: 400px; /* Carousel size */
+        margin: 50px auto;
+        overflow: hidden;
+        border: 2px solid #f10606;
+        background-color: rgba(255, 176, 5, 0.7);
+        animation: changeColor 5s infinite; /* Slight transparent background for carousel content */
+      }
+      @keyframes changeColor {
+  0% {
+    background-color: rgba(255, 0, 0, 0.7); /* Red */
+  }
+  33% {
+    background-color: rgba(0, 0, 255, 0.7); /* Blue */
+  }
+  66% {
+    background-color: rgba(255, 255, 0, 0.7); /* Yellow */
+  }
+  100% {
+    background-color: rgba(255, 0, 0, 0.7); /* Back to Red */
+  }
+}
 
-    .carousel-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+      .carousel-image {
+        position: absolute;
+        top: 50px; /* Adjusted to be within background */
+        left: 50px; /* Adjusted to be within background */
+        width: 600px; /* Adjusted for fitting */
+        height: 300px; /* Adjusted for fitting */
+        object-fit: contain; /* Keeps image aspect ratio */
+        display: none;
+      }
 
-    .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 40px;
-      height: 40px;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      text-align: center;
-      line-height: 40px;
-      font-size: 20px;
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .carousel-arrow.previous {
+        left: 10px;
+      }
+
+      .carousel-arrow.next {
+        right: 10px;
+      }
+
+      .name-input {
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .animal-name {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+      .enter-button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
     }
 
-    .carousel-arrow.previous {
-      left: 10px;
+    .enter-button:hover {
+      background-color: #218838;
     }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="back-button">Go Back</a>
+    <div class="carousel-container">
+      <img
+        class="carousel-image"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqqjV0J2AlQUHBtUyT8yGYCDD-0gI_aYbskw&s"
+        alt="Image 7"
+      />
+      <img
+        class="carousel-image"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDTenHssNQ_cBpHrAQim_6tF7_UMNmWEfVUQ&s"
+        alt="Image 8"
+      />
+      <img
+        class="carousel-image"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlyNjyL55NPUshkQnq3Ftldc6S0sYyT-7PtA&s"
+        alt="Image 9"
+      />
+      <img
+        class="carousel-image"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKhW4ivaEb1soYDvlPaf7ZKI7gMdJ6K21-Aw&s"
+        alt="Image 10"
+      />
+      <img
+        class="carousel-image"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiquV8sPKr77ql6CrLBokGFHJ6btixRQlobw&s"
+        alt="123213"
+      />
+      <img
+        class="carousel-image"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN8QfRPyf6EutqUXd_acfINrnrH9RTDkEUDw&s"
+        alt="123 12"
+      />
+      <img
+        class="carousel-image"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW6KbErjuqCfeC4VyAIFnVfTpX4L5P42G-VQ&s"
+        alt="I123123"
+      />
+      <img
+        class="carousel-image"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUMzOYwJkieyxPUSSQAsPOteC8tfVa4Sd83w&s"
+        alt="123123"
+      />
+      <img class="carousel-image" src="./assets/1.jpg" alt="" />
+      <img class="carousel-image" src="./assets/2.jpg" alt="" />
+      <img class="carousel-image" src="./assets/3.jpg" alt="" />
+      <img class="carousel-image" src="./assets/4.jpg" alt="" />
+      <img class="carousel-image" src="./assets/5.jpg" alt="" />
+      <img class="carousel-image" src="./assets/6.jpg" alt="" />
+      <img class="carousel-image" src="./assets/7.jpg" alt="" />
+      <img class="carousel-image" src="./assets/8.jpg" alt="" />
+      <img class="carousel-image" src="./assets/9.jpg" alt="" />
+      <img class="carousel-image" src="./assets/10.jpg" alt="" />
 
-    .carousel-arrow.next {
-      right: 10px;
-    }
+      <div class="carousel-arrow previous">&#8249;</div>
+      <div class="carousel-arrow next">&#8250;</div>
 
-    .name-input {
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="carousel-container">
-    <img class="carousel-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzJiKQkMuDKHxWvimCOdukqEUQm6gcGF4EjA&s" alt="Image 1">
-    <img class="carousel-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz4i4DYghC-BjEf7C7qzeV4Bl5MCby_gCbCw&s" alt="Image 2">
-    <img class="carousel-image" src="https://example.com/image3.jpg" alt="Image 4">
-    <img class="carousel-image" src="https://example.com/image3.jpg" alt="Image 5">
-    <img class="carousel-image" src="https://example.com/image3.jpg" alt="Image 6">
-    <img class="carousel-image" src="https://example.com/image3.jpg" alt="Image 7">
-    <img class="carousel-image" src="https://example.com/image3.jpg" alt="Image 8">
-    <img class="carousel-image" src="https://example.com/image3.jpg" alt="Image 9">
-    <img class="carousel-image" src="https://example.com/image3.jpg" alt="Image 10">
-    <img class="carousel-image" src="https://example.com/image3.jpg" alt="Image 11">
-    <img class="carousel-image" src="https://example.com/image3.jpg" alt="Image 12">
-    <img class="carousel-image" src="https://example.com/image3.jpg" alt="Image 13">
-    <img class="carousel-image" src="https://example.com/image3.jpg" alt="Image 14">
+      <div class="animal-name" id="animal-name">Animal 1</div>
+    </div>
 
+    <!-- <div class="name-input"> -->
+      <!-- <label for="image-name">Enter Image Name:</label> -->
+      <!-- <input type="text" id="image-name" name="image-name" /> -->
+      <!-- <button class="enter-button" onclick="updateAnimalName()">Enter</button> -->
+
+    <!-- </div> -->
+
+    <script>
+      const images = document.querySelectorAll(".carousel-image");
+      const previousArrow = document.querySelector(".carousel-arrow.previous");
+      const nextArrow = document.querySelector(".carousel-arrow.next");
+      const animalNameDisplay = document.getElementById("animal-name");
+      const nameInput = document.getElementById("image-name");
+
+      let currentIndex = 0;
+
+      // Array of animal names
+      const animalNames = [
+        "Lion",
+        "Tiger",
+        "Elephant",
+        "Giraffe",
+        "Zebra",
+        "Monkey",
+        "Panda",
+        "Koala",
+        "Penguin",
+        "Polar Bear",
+        "Kangaroo",
+        "Koala",
+        "Panda",
+        "Penguin",
+        "Polar Bear",
+        "Kangaroo",
+        "cookie",
+        "pookie",
+      ];
+      //
+      // Show the first image initially
+      showImage(currentIndex);
+
+      function showImage(index) {
+        images.forEach((image, i) => {
+          if (i === index) {
+            image.style.display = "block";
+          } else {
+            image.style.display = "none";
+          }
+        });
+        // Update the animal name
+        animalNameDisplay.textContent = animalNames[index] || "Unknown Animal";
+      }
+
+      function showPreviousImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+      }
+
+      function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      }
+
+      previousArrow.addEventListener("click", showPreviousImage);
+      nextArrow.addEventListener("click", showNextImage);
+
+      // Auto picture changes every 3 seconds
+      setInterval(showNextImage, 2000);
+
+      // Update animal name based on input
+      if (foundIndex !== -1) {
+        currentIndex = foundIndex;
+        showImage(currentIndex);
+      } else {
+        alert("Animal not found!");
+      }
+        
     
-
-    <div class="carousel-arrow previous">&#8249;</div>
-    <div class="carousel-arrow next">&#8250;</div>
-  </div>
-
-  <div class="name-input">
-    <label for="image-name">Enter Image Name:</label>
-    <input type="text" id="image-name" name="image-name">
-  </div>
-
-  <script>
-    const images = document.querySelectorAll('.carousel-image');
-    const previousArrow = document.querySelector('.carousel-arrow.previous');
-    const nextArrow = document.querySelector('.carousel-arrow.next');
-    const nameInput = document.getElementById('image-name');
-
-    let currentIndex = 0;
-
-    function showImage(index) {
-      images.forEach((image, i) => {
-        if (i === index) {
-          image.style.display = 'block';
-        } else {
-          image.style.display = 'none';
-        }
-      });
-    }
-
-    function showPreviousImage() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      showImage(currentIndex);
-    }
-
-    function showNextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
-    }
-
-    previousArrow.addEventListener('click', showPreviousImage);
-    nextArrow.addEventListener('click', showNextImage);
-  </script>
-</body>
+    </script>
+  </body>
 </html>
