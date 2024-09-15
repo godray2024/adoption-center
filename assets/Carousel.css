@@ -1,0 +1,112 @@
+body {
+    background-image: url("background.jpg"); /* Full background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+  }
+  .back-button {
+    display: block;
+    margin: 20px auto; /* Center horizontally */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e49d04;
+    color: rgb(245, 11, 11);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  .carousel-container {
+    position: relative;
+    width: 700px; /* Carousel size */
+    height: 400px; /* Carousel size */
+    margin: 50px auto;
+    overflow: hidden;
+    border: 2px solid #f10606;
+    background-color: rgba(255, 176, 5, 0.7);
+    animation: changeColor 5s infinite; /* Slight transparent background for carousel content */
+  }
+  @keyframes changeColor {
+0% {
+background-color: rgba(255, 0, 0, 0.7); /* Red */
+}
+33% {
+background-color: rgba(0, 0, 255, 0.7); /* Blue */
+}
+66% {
+background-color: rgba(255, 255, 0, 0.7); /* Yellow */
+}
+100% {
+background-color: rgba(255, 0, 0, 0.7); /* Back to Red */
+}
+}
+
+  .carousel-image {
+    position: absolute;
+    top: 50px; /* Adjusted to be within background */
+    left: 50px; /* Adjusted to be within background */
+    width: 600px; /* Adjusted for fitting */
+    height: 300px; /* Adjusted for fitting */
+    object-fit: contain; /* Keeps image aspect ratio */
+    display: none;
+  }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .carousel-arrow.previous {
+    left: 10px;
+  }
+
+  .carousel-arrow.next {
+    right: 10px;
+  }
+
+  .name-input {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .animal-name {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .enter-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.enter-button:hover {
+  background-color: #218838;
+}
