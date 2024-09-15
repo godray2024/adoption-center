@@ -111,7 +111,7 @@
   
   /* Hero Section */
   .hero {
-    background-image: url('./41-dfb8982077cfc034196d588670c31041898e44bc7fd309b575b5eae321229f29.jpg');
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
