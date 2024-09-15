@@ -1,33 +1,38 @@
+// Login Modal
+
 // Ensure the DOM is fully loaded before running the script
 document.addEventListener('DOMContentLoaded', function () {
   // Get the modal element
-  var contactModal = document.getElementById('contactModal');
+  var loginModal = document.getElementById('loginModal');
 
   // Get the button that opens the modal
-  var btn = document.getElementById('contactBtn'); // Assuming you have a button with this ID to open the modal
+  var btn = document.getElementById('loginBtn'); // Assuming you have a button with this ID to open the modal
 
   // When the user clicks the button, open the modal
   btn.onclick = function () {
-      $(contactModal).modal('show');
+    $(loginModal).modal('show');
   };
 
-  // Handle the "Send Message" button click
-  var sendMessageBtn = contactModal.querySelector('.btn-primary');
-  sendMessageBtn.onclick = function () {
-      // You can add your form submission logic here
-      var name = document.getElementById('name').value;
-      var email = document.getElementById('email').value;
-      var message = document.getElementById('message').value;
+  // Handle the "Login" button click
+  var loginBtn = loginModal.querySelector('.btn-primary');
+  loginBtn.onclick = function () {
+    // You can add your login logic here
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
 
-      // Log the values to the console
-      console.log('Name:', name);
-      console.log('Email:', email);
-      console.log('Message:', message);
+    // Store the login information in local storage
+    localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
 
-      // Clear the form fields after submission
-      document.querySelector('form').reset();
+    // Log the values to the console
+    console.log('Username:', username);
+    console.log('Password:', password);
 
-      // Close the modal
-      $(contactModal).modal('hide');
+    // Clear the form fields after submission
+    document.querySelector('form').reset();
+
+    // Close the modal
+    $(loginModal).modal('hide');
   };
 });
+

@@ -87,21 +87,7 @@ footer a {
   border: 1px solid #cc0000;
   letter-spacing: 1.5px;
   margin-top: 22px;
-} /* #loginBtn {
-    padding: 8px 20px;
-    border: 2px solid #e99906;
-    background-color: transparent;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 10px;
-  }
-  
-  #loginBtn:hover {
-    background-color: #fff;
-    color: #000; */
-/* } */
+} 
 
 /* Hero Section */
 .hero {
@@ -149,6 +135,13 @@ footer a {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.modal-title {
+  color: #ffb100;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .modal-content {
   background-color: #333;
   margin: 15% auto;
@@ -163,7 +156,7 @@ footer a {
   float: right;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #fff;
+  color: #ff0000;
 }
 
 .close:hover {
@@ -196,6 +189,10 @@ footer a {
 .error {
   color: red;
   margin-top: 10px;
+}
+
+#closeBtn {
+  margin-left: 250px;
 }
 
 /* Footer */
