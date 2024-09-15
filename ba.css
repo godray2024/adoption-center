@@ -56,7 +56,7 @@ html {
 .reno911 {
   margin: 0 auto;
   height: 444px;
-  background: #000000;
+  background: rgb(0, 0, 0);
   text-align: center;
   border-radius: 50px;
   position: relative;
