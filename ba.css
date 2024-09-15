@@ -1,8 +1,11 @@
+html {
+  background-color: black;
+}
 .column911 {
   margin: 0 auto;
   padding: 2em;
   width: 300px;
-  background: #ffffff;
+  background: #000000;
   text-align: center;
   border-radius: 50px;
   position: relative;
@@ -52,13 +55,12 @@
 /* reno911 */
 .reno911 {
   margin: 0 auto;
-  padding: 2em;
-
   height: 444px;
-  background: #ffffff;
+  background: #000000;
   text-align: center;
   border-radius: 50px;
-  /* position: relative; */
+  position: relative;
+  opacity: 0.9;
 }
 
 @property --angle {
@@ -71,7 +73,7 @@
 .reno911::before {
   content: "";
   position: absolute;
-  height: 3000px;
+  height: 1555px;
   width: 77%;
   background-image: conic-gradient(
     from var(--angle),
@@ -102,13 +104,20 @@
   }
 }
 
+.columns h1 {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
 .columns {
   display: flex;
   justify-content: center;
   gap: 1em;
-  background-color: rgba(255, 255, 255, 0.877);
+  background-color: rgba(0, 0, 0, 0.877);
   border-radius: 50px;
-  font-size: 22px;
+  font-size: 26px;
+  color: #ffffff;
 }
 
 section {
@@ -120,4 +129,5 @@ section {
   flex-direction: row-reverse;
   justify-content: center;
   align-items: stretch;
+  padding: 0%;
 }
