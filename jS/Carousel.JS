@@ -60,10 +60,10 @@ nextArrow.addEventListener("click", showNextImage);
 setInterval(showNextImage, 2000);
 
 // Update animal name based on input
-if (foundIndex !== -1) {
-  currentIndex = foundIndex;
-  showImage(currentIndex);
-} else {
-  alert("Animal not found!");
-}
+// if (foundIndex !== -1) {
+//   currentIndex = foundIndex;
+//   showImage(currentIndex);
+// } else {
+//   alert("Animal not found!");
+// }
   
