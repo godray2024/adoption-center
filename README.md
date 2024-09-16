@@ -25,4 +25,4 @@ Every animal we save is a step toward a kinder, more caring world. Whether you'r
 
 ## Deployed Application
 
-You can access the deployed application [Adoption-Center](http://127.0.0.1:5500/index.html).
+You can access the deployed application [Adoption-Center](https://godray2024.github.io/adoption-center/).
